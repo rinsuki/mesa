@@ -1,5 +1,68 @@
 [
     {
+        "sha": "3415b51b1ce173735ff8c9a61846c9e27c6b8ffd",
+        "description": "ci/windows: Remove line numbers of SPIR-V errors in spirv2dxil tests",
+        "nominated": false,
+        "nomination_type": null,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null
+    },
+    {
+        "sha": "fa4e08112ecb54ec082c2b259842c0758ddc9f2a",
+        "description": "aco: remove SMEM constant/addition combining out of the loop",
+        "nominated": false,
+        "nomination_type": null,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null
+    },
+    {
+        "sha": "dd18925f864dd4160502c7080e6f07aff0932345",
+        "description": "aco: skip &-4 before SMEM",
+        "nominated": false,
+        "nomination_type": null,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null
+    },
+    {
+        "sha": "cf5fc4b973cd9193f3a1fcb684c75a0e15c2b25c",
+        "description": "aco: disallow SMEM offsets that are not multiples of 4",
+        "nominated": false,
+        "nomination_type": null,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null
+    },
+    {
+        "sha": "860532c5a16e912b66537d911f60b61439630937",
+        "description": "radv: Add safety check for RGP traces on VanGogh.",
+        "nominated": false,
+        "nomination_type": null,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null
+    },
+    {
+        "sha": "3077d968568213bfe2990ddc4ada2763d9701418",
+        "description": "crocus: Clamp VS point sizes to the HW limits as required.",
+        "nominated": false,
+        "nomination_type": null,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null
+    },
+    {
+        "sha": "39ea803f9fb7fadd19963a99b4fe3cfc9147b073",
+        "description": "ci/crocus: Add support for manual CI runs on my G41.",
+        "nominated": false,
+        "nomination_type": null,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null
+    },
+    {
         "sha": "a65285f54be6d756a8a558f638c18bb4f075222c",
         "description": "nir/opt_access: infer CAN_REORDER for global access",
         "nominated": false,
