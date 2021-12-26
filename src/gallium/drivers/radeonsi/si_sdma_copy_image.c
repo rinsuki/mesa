@@ -261,7 +261,7 @@ bool cik_sdma_copy_texture(struct si_context *sctx, struct si_texture *sdst, str
        (sctx->chip_class != GFX7 ||
         (copy_width < (1 << 14) && copy_height < (1 << 14))) &&
        /* HW limitation - some GFX7 parts: */
-       ((sctx->family != CHIP_BONAIRE && sctx->family != CHIP_KAVERI) ||
+       ((sctx->family != CHIP_BONAIRE && sctx->family != CHIP_LIVERPOOL && sctx->family != CHIP_KAVERI) ||
         (copy_width != (1 << 14) && copy_height != (1 << 14)))) {
       struct radeon_cmdbuf *cs = sctx->sdma_cs;
 
@@ -321,11 +321,11 @@ bool cik_sdma_copy_texture(struct si_context *sctx, struct si_texture *sdst, str
          copy_width_aligned = align(copy_width, xalign);
 
       /* HW limitations. */
-      if ((sctx->family == CHIP_BONAIRE || sctx->family == CHIP_KAVERI) &&
+      if ((sctx->family == CHIP_BONAIRE || sctx->family == CHIP_LIVERPOOL ||  sctx->family == CHIP_KAVERI) &&
           linear_pitch - 1 == 0x3fff && bpp == 16)
          return false;
 
-      if ((sctx->family == CHIP_BONAIRE || sctx->family == CHIP_KAVERI ||
+      if ((sctx->family == CHIP_BONAIRE || sctx->family == CHIP_LIVERPOOL || sctx->family == CHIP_KAVERI ||
            sctx->family == CHIP_KABINI) &&
           (copy_width == (1 << 14) || copy_height == (1 << 14)))
          return false;
